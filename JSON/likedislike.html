@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+<script>
+function likes() {
+    
+                   if(localStorage.like) 
+                   {
+                        localStorage.like = Number(localStorage.like)+1;
+                   } 
+                    else {
+                                localStorage.like = 1;
+                         }
+    document.getElementById("result").innerHTML =  localStorage.like + " LIKES";
+     
+                  }
+function dislike() {
+    
+        if (localStorage.dl) 
+        {
+            localStorage.dl = Number(localStorage.dl)-1;
+        } 
+        else {
+                    localStorage.dl = 1;
+             }
+document.getElementById("result1").innerHTML = localStorage.dl + " DISLIKE(s)";
+       
+             }
+</script>
+</head>
+<body onload="abc()">
+<script type="text/javascript">
+function abc(){
+
+	if(typeof(Storage) !== "undefined") {
+       document.getElementById("result").innerHTML = localStorage.like + " LIKE(s).";
+        document.getElementById("result1").innerHTML = localStorage.dl + " DISLIKE(s).";
+    } else {
+        document.getElementById("result1").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+	<image src="https://pbs.twimg.com/profile_images/718314968102367232/ypY1GPCQ_400x400.jpg" height="400" width="400">
+<p><button id="result" onclick="likes()" type="button">LIKE</button>
+<button id="result1" onclick="dislike()" type="button" style="margin-left:100px;">DISLIKE</button></p>
+</body>
+</html>
