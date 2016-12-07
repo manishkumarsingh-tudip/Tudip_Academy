@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JAVASCRIPT MAGIC</h1>
+
+
+<button onclick="setTimeout(abc, 3000);">MAGIC START</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+<img id="myImage2" src="pic_bulboff.gif" style="width:100px">
+<img id="myImage3" src="pic_bulboff.gif" style="width:100px">
+
+<script>
+var j,i=0;
+function abc()
+{
+	
+document.getElementById('myImage').src='pic_bulbon.gif';
+document.getElementById('myImage2').src='pic_bulboff.gif';
+document.getElementById('myImage3').src='pic_bulbon.gif';
+setTimeout(abcc, 2000);
+}
+function abcc()
+{
+	
+document.getElementById('myImage').src='pic_bulboff.gif';
+document.getElementById('myImage2').src='pic_bulbon.gif';
+document.getElementById('myImage3').src='pic_bulboff.gif';
+setTimeout(abc, 2000);
+}
+</script>
+</body>
+</html>
+
